@@ -1,0 +1,105 @@
+
+.img4 img{ 
+  -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+  filter: blur(5px);
+}
+
+.img4 img:hover{
+  -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+  filter: blur(0px);
+}
+.img3 img:hover{ 
+  filter: grayscale(0%); 
+} 
+.img3 img{ 
+  filter:grayscale(100%); 
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.1image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #0066CC;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+.flower{ 
+  background-image:url("flower.jpeg");
+}
+.bear{ 
+  background-image:url("blue3.jpeg");
+}
+#container {
+  scroll-behavior: smooth;
+  width: 50%;
+  aspect-ratio: 2/1;
+  margin: auto;
+  border: solid black 2px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  white-space: nowrap;
+  scroll-snap-align: x mandatory;
+  scrollbar-color:MediumBlue DodgerBlue;
+}
+.overlay1 {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-image:url("bl.jpeg");
+  color:black;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+.container div:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+ .container div:hover .overlay1 {
+  bottom: 0;
+  height: 100%; 
+ }
+.pic img:hover{ 
+  animation: shake 0.5s;
+  animation-iteration-count: infinite; 
+}
+
+@keyframes shake{ 
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.1text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
